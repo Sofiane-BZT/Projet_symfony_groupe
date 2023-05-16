@@ -1,0 +1,13 @@
+{% block body %}
+{{ form_start(form) }}
+    {{ form_label(form.Nom) }}
+    {{ form_widget(form.Nom) }}
+    {{ form_label(form.Prenom) }}
+    {{ form_widget(form.Prenom) }}
+    {{ form_label(form.Age) }}
+    {{ form_widget(form.Age) }}
+    {{ form_rest(form) }}
+        <button type="submit">Enregistrer</button>
+    {{ form_end(form) }}
+
+{% endblock %}

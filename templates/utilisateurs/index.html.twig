@@ -1,0 +1,16 @@
+{% block title %}Affichage de la liste Utilisateurs {% endblock %}
+
+{% block body %}
+
+<table border="1">
+{% for p in Utilisateurs %}
+
+<tr>
+    <td>{{ p.nom }}</td>
+    <td>{{ p.prenom }}</td>
+    <td>{{ p.age }}</td>
+    <td> <a href="{{path('utilisateur_edit', {id:p.id})}}">EDIT</a></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
